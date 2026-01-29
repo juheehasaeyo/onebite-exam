@@ -5,7 +5,7 @@ import { useTodoDataById } from "@/hooks/queries/use-todo-data-by-id";
 import { Link } from "react-router";
 
 export default function TodoItem({ id }: { id: string }) {
-  const { data: todo } = useTodoDataById(id);
+  const { data: todo } = useTodoDataById(id, "LIST");
   if (!todo) throw new Error("Todo Data Undefined");
   const { content, isDone } = todo;
 
