@@ -7,7 +7,7 @@ export function useTodoDataById(id: string) {
     queryFn: () => fetchTodoById(id),
     queryKey: QUERY_KEYS.todo.detail(id),
 
-    staleTime: 5000,
+    staleTime: 1000,
     gcTime: 5000,
   });
 }
